@@ -1,0 +1,75 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {#            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        }
+                    }
+                }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+                .content-auto {
+                    content-visibility: auto;
+                }
+            }
+
+            .sab {
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+
+            .bgbg {
+                background-color: rgba(63, 165, 196, 0.25);
+            }
+        </style>
+
+        <br>
+    <body class="antialiased bg-slate-200" align="ltr">
+    {% include 'messages.html' %}
+
+        <div class="text-right max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
+            <h1 class="text-4xl font-medium">ساخت حساب کاربری</h1>
+            <br>
+            <p class="text-slate-500">سلام.خوش اومدی 👋</p>
+
+
+            <form class="my-10" method="POST" >
+                {% csrf_token %}
+                <div class="flex flex-col space-y-5">
+                    <label for="username">
+                        <p class="font-medium text-slate-700 pb-2">نام کاربری </p>
+                        <input id="username"  required name="username" type="text" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" placeholder=" مثل: ali ">
+                    </label>
+                    <label for="email">
+                        <p class="font-medium text-slate-700 pb-2"> ایمیل</p>
+                        <input id="email" name="email" required type="email" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" placeholder="example@example.com">
+                    </label>
+                    <label for="password">
+                        <p class="font-medium text-slate-700 pb-2">رمز ورود</p>
+                        <input id="password" name="password" required type="password" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" placeholder="********">
+                    </label>
+                    <div class="flex flex-row justify-between">
+                    </div>
+                    <input type="submit" class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center" value="ساخت حساب کاربری ">
+                    <p class="text-center"> به حساب کاربری<a href="{% url 'users:login' %}" class="text-indigo-600 font-medium inline-flex space-x-1 items-center"><span>ورود </span><span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg></span></a></p>
+                </div>
+            </form>
+        </div>
+    </body>

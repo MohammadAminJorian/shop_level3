@@ -1,0 +1,81 @@
+{% include "base/style.html" %}
+    <body class="leading-normal tracking-normal text-white "
+          style="font-family: 'Source Sans Pro', sans-serif;">
+
+{% include "base/header.html" %}
+
+<br><br><br>
+<div class="flex items-center text-right justify-center">
+    <!-- Author: FormBold Team -->
+    <div class="mx-auto w-full max-w-[550px] bg-white">
+        <form class="py-4 px-9" enctype="multipart/form-data" method="POST" >
+            {% csrf_token %}
+            <div class="mb-5">
+                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                    نام
+                </label>
+                <input type="text" required maxlength="20" name="first_name" id="email" placeholder="نام "
+                    class="w-full text-right rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+
+            <div class="mb-5">
+                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                    نام خانوادگی
+                </label>
+                <input type="text" required name="last_name" maxlength="20" id="email" placeholder="نام خانوادگی"
+                    class="w-full text-right rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" >
+            </div>
+
+            <div class="mb-5">
+                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                    شماره
+                </label>
+                <input type="text" required name="phone" maxlength="11" id="email" placeholder=" شماره تماس"
+                    class="w-full text-right rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+
+
+            <div class="mb-5">
+                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                    آدرس
+                </label>
+                <input type="text" required name="adress"  maxlength="200" id="email" placeholder="ادرس"
+                    class="w-full text-right rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+
+
+            <div class="mb-6 pt-4">
+                <label class="mb-5 block text-xl font-semibold text-[#07074D]">
+                    آپلود عکس
+                </label>
+
+                <div class="mb-8">
+                    <input type="file" required name="image" id="file" class="sr-only" />
+                    <label for="file"
+                        class="relative flex min-h-[200px] items-center justify-center rounded-md border border-dashed border-[#e0e0e0] p-12 text-center">
+                        <div>
+
+                            <span class="mb-2 block text-base font-medium text-[#6B7280]">
+                                عکس پروفایل
+                            </span>
+                            <span
+                                class="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D]">
+                                انتخاب
+                            </span>
+                        </div>
+                    </label>
+                </div>
+
+
+
+
+            </div>
+
+            <div>
+                <input type="submit"
+                    value="ثبت" class="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
+
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+{% include "base/style.html" %}
+{% include "messages.html" %}
+{% include "base/header.html" %}
+<br><br><br><br>
+
+<div class="bg-gray-100  py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row -mx-4">
+            <div class="md:flex-1 px-4">
+                <div class="h-[460px] rounded-lg bg-gray-300  mb-4">
+                    <img class="w-full h-full object-cover" src="{{ detail.image.url }}" alt="Product Image">
+                </div>
+                <div class="flex -mx-2 mb-4">
+                    {% for product in product %}
+                    <div class= "">
+				<a class="" href="{% url 'shop:add_to_cart' product.id %}"><button class="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 ">افزودن به سبد خرید</button></a>
+</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="md:flex-1 px-4">
+                <h2 class="text-2xl font-bold text-gray-800  mb-2">{{ detail.title }}</h2>
+                <br>
+                <div class="flex mb-4">
+
+                    <br>
+                    <div>
+                        <span class="font-bold text-xl text-gray-700 ">تعداد باقی مانده از محصول:</span>
+                        <span class="text-xl text-gray-600 ">{{ detail.tedad }}</span>
+                    </div>
+                </div>
+                <br>
+
+                <div>
+                    <span class="font-bold text-xl text-gray-700 ">توضیحات این محصول:</span>
+                    <p class="text-gray-600  text-xl mt-2">
+                        {{ detail.desc }}
+                    </p>
+                </div>
+                <br><br><br>
+                                    <div class="mr-4">
+                        <span class="font-bold text-xl text-gray-700 ">قیمت محصول :</span>
+                        <span class="text-gray-600 text-xl ">{{ detail.price }}</span>
+                    </div>
+                <form method="POST" action="">
+                    {% csrf_token %}
+<div class="flex flex-wrap mt-10 text-right -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+چه تعداد از این محصول می خواهید؟          </label>
+      <input name="num" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-900 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" required id="grid-first-name" type="text" placeholder="فقط عدد وارد کنید">
+    </div>
+</div>
+                            <div class="flex mt-2 justify-left">
+                            <input type="submit"
+                                class="text-white bg-indigo-700  hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800" value="ثبت تعداد   " />
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

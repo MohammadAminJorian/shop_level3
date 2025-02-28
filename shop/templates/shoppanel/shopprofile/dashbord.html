@@ -1,0 +1,72 @@
+
+{% include "base/style.html" %}
+{% include "messages.html" %}
+{% include "base/header.html" %}
+
+
+<div class="bg-white w-full flex flex-col gap-5 px-3 md:px-16 lg:px-28 md:flex-row text-[#161931]">
+
+   <aside class="hidden py-4 md:w-1/3 lg:w-1/4 md:block">
+        <div class="sticky flex flex-col gap-2 p-4 text-sm border-r border-indigo-100 top-12">
+            <br><br><br>
+            <h2 class="pl-3 mb-4 text-2xl font-semibold"> تنظیمات فروشگاه</h2>
+
+            <a href="{% url 'shop:dashbord' %}" class="flex items-center px-3 py-2.5 font-bold bg-white  text-indigo-900 border rounded-full">
+                داشبورد
+            </a>
+            <a href="{% url 'shop:ProfileShopEdit' %}" class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full">
+                ویرایش پوفایل
+            </a>
+            <a href="{% url 'shop:ViewProfileShop' %}"
+                class="flex items-center px-3 py-2.5 font-semibold  hover:text-indigo-900 hover:border hover:rounded-full">
+                نمایش پروفایل
+            </a>
+            <a href="{% url 'shop:create_product' %}"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                اضافه کردن محصول
+            </a>
+            <a href="{% url 'shop:ViewProduct' %}"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                نمایش محصولات
+            </a>
+            <a href="#"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                (به زودی) میزان فروش
+            </a>
+            <a href="#"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                (به زودی) مشتریان
+            </a>
+            <a href="#"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                (به زودی)مقایسه میزان سود
+            </a>
+            <a href="#"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                (به زودی)افزودن شعبه دیگر
+            </a>
+            <a href="#"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                (به زودی)ارتقا فروشگاه به سطح 2
+            </a>
+            <a href="#"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                (به زودی)میزان در آمد از سایت
+            </a>
+            <a href="#"
+                class="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+                (به زودی)تخفیف ویژه محصول
+            </a>
+
+
+        </div>
+    </aside>
+    <br><br><br>
+<div class="text-3xl text-right"><div class="text-right">
+    <br><br><br><br><br><br><br><br><br>
+    (به زودی)داشبورد
+    </div>
+</div>
+
+
+</div>

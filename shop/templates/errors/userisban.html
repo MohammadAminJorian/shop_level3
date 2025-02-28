@@ -1,0 +1,117 @@
+
+
+
+<center>
+    {% include 'messages.html' %}
+</center>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {#            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+
+        .sab {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .bgbg {
+            background-color: rgba(63, 165, 196, 0.25);
+        }
+
+ @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+    <br>
+    <br>
+
+
+
+
+
+        <body class="bg-gradient-to-r from-purple-500 to-indigo-500">
+    <div class="flex items-center justify-center h-screen">
+        <div class="p-8 bg-white rounded-lg shadow-lg">
+            <div class="flex items-center justify-center mb-4">
+                <svg class="w-16 h-16 text-red-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+            </div>
+            <h1 class="text-3xl font-bold text-center text-gray-800">شما اجازه ورود ندارید</h1>
+{#            <p class="mt-2 text-sm text-center text-gray-600">حساب کاربری شما هنوز نوسط مدیریت قبول نشده است.</p>#}
+            <div class="flex justify-center mt-6">
+                <div class="w-16 h-1 bg-gray-200 rounded-full animate-gradient"></div>
+            </div>
+            <div class="mt-6">
+                <div class="text-center">
+{#                    <p class="text-lg font-bold text-gray-800">کد ارور:102 </p>#}
+                    <p class="mt-1 text-sm text-gray-600"></p>
+                </div>
+            </div>
+            <div class="mt-6">
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="px-2 bg-gray-200 text-gray-500">حساب کاربری شما به دلایلی تا اطلاع ثانوی مسدود می باشد </span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <a href="{% url 'shop:home' %}" class="block w-full py-2 px-4 border border-transparent items-right text-right rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                    تلاش مجدد
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const gradientAnimation = document.querySelector('.animate-gradient');
+        gradientAnimation.style.animation = 'gradientAnimation 3s ease infinite';
+    </script>
+</body>
+
+
+
+
+</html>
