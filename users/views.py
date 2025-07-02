@@ -116,5 +116,3 @@ class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
     success_url = reverse_lazy('users:login')
 
 
-
-
